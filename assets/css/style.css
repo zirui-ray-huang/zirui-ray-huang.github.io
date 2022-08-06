@@ -866,7 +866,28 @@ main {
   border-radius: inherit;
 }
 
+/**
+ * #Tools
+ */
 
+.tools-title { margin-bottom: 20px; margin-top: 20px;}
+
+.tools-list { padding: 20px; }
+
+.tools-item:not(:last-child) { margin-bottom: 15px; }
+
+.tools.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.tools.title-wrapper data {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+}
 
 
 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zirui Huang's Home Page</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Zirui Huang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Zirui Huang">Zirui Huang</h1>
+
+          <p class="title">Ph.D. Candidate in Transportation</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/raymondzrhuang/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+<!--
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ziruihuang@arizona.edu" class="h7 contact-link">ziruihuang@arizona.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+15202433284" class="contact-link">+1 (520) 243-3284</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Tucson, Arizona, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link onclick="history.back()">Back</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Cycling Routing Engine &#128692</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+              The cycling routing engine was developed for the greater Houston area. Users can pick and navigate through routes
+              between an origin and a destination, of varying <b>comfort level</b>, which we defined by <i>the road type</i>, <i>the view along the road</i>,
+              <i>the altitude changes</i>, etc. This bike-friendly product suits cyclists' need in traveling with different trip purposes, recreation or commute,
+              or just cycle to chill a bit. This cycling routing engine has been integrated into the app <b><i>ConnectSmart</i></b>, which is sponsored by Texas Department of Transportation (TxDOT) as deliverables in
+              <u><b><a href = "https://www.metropia.com/houston-connectsmart" style="display:inline">ConnectSmart</a></b></u> project.
+          </p>
+          <img src="./assets/images/cycle.gif" alt="this slowpoke moves" width="40%" class="center">
+          <p> </p>
+
+          <p style="text-align:right">
+              Try our cycling routing engine in our ConnectSmart app (<u><b><a href = "https://play.google.com/store/apps/details?id=com.connectsmart.carpool.transit.gps.directions.rideshare.navigate&hl=en_US&gl=US" style="display:inline">Android</a></b></u>/
+              <u><b><a href = "https://apps.apple.com/us/app/houston-connectsmart-traffic/id1529532077" style="display:inline">IOS</a></b></u>).
+          </p>
+
+          <img src="./assets/images/cycle.jpg" alt="this slowpoke moves" width="100%">
+          <p>
+              <ul>
+                <li><b>Route 1</b>: along the streets, sharing space with vehicles, but with less travel time</li>
+                <li><b>Route 2</b>: along the bayou, having better view and high safety, but with more travel time</li>
+              </ul>
+          </p>
+
+          <p>
+              <i><u>Thanks to my Metropia colleagues for their great efforts in putting the multimodal trip planners onto the website and into the app.</u></i>
+          </p>
+
+        </section>
+
+      </article>
+
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zirui Huang's Home Page</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Zirui Huang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Zirui Huang">Zirui Huang</h1>
+
+          <p class="title">Ph.D. Candidate in Transportation</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/raymondzrhuang/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+<!--
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ziruihuang@arizona.edu" class="h7 contact-link">ziruihuang@arizona.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+15202433284" class="contact-link">+1 (520) 243-3284</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Tucson, Arizona, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link onclick="history.back()">Back</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Multimodal Trip Planners</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+              The multimodal trip planners were developed for Taiwan and the greater Houston area. With representing stops and schedules
+              by a realistic time-expanded transit graph and applying a modified <u><a href = "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.39.3901&rep=rep1&type=pdf" style="display:inline">Eppstein's algorithm</a></u>
+              and heuristics methods, users can search for the available options that suits their needs in:
+          </p>
+          <img src="./assets/images/im-tw-settings.jpg" alt="this slowpoke moves" width="100%">
+          <p> </p>
+          <p>
+              <i>(Don't worry, if you feel overwhelmed by these settings, we actually have default values. But still, you are more than welcome
+                  to customize your trip if you need to.)</i>
+          </p>
+
+          <p> </p>
+
+          <h3 class="h3 service-title">Taiwan</h3>
+          <p>
+              This comprehensive multimodal trip planner for Taiwan integrates nearly <b>9,000</b> routes, <b>65,000</b> stops, <b>200,000</b> daily trips across <b>12</b> modes
+              (High Speed Rail, Rail, Bus, LRT, MRT, Ferry, Gondola, Shared Bike, Car Rental, etc., even including very local shuttle buses). This product will be delivered to
+              Ministry of Transportation and Communications (Taiwan), together with other Mobility-as-a-Service (MaaS) computing and service platforms and products,
+              as deliverables in <u><a href = "https://www.metropia.com/umaji-taiwan" style="display:inline">UMAJI</a></u> project.
+          </p>
+          <img src="./assets/images/im-tw.gif" alt="this slowpoke moves" width="100%">
+          <p style="text-align:right">
+          Illustration by internal testing tool. Will be open to public soon.
+          </p>
+
+          <h3 class="h3 service-title">The Greater Houston</h3>
+          <p>
+              This comprehensive multimodal trip planner for the greater Houston integrates public transits of METRO, Harris County, Woodland, Conroe, and Angleton. This engine has been
+              integrated into the app <b><i>ConnectSmart</i></b>, which is sponsored by Texas Department of Transportation (TxDOT) as deliverables in
+              <u><b><a href = "https://www.metropia.com/houston-connectsmart" style="display:inline">ConnectSmart</a></b></u> project.
+          </p>
+          <img src="./assets/images/im-houston.gif" alt="this slowpoke moves" width="40%" class="center">
+          <p style="text-align:right">
+              Try our multimodal trip planner in our ConnectSmart app (<u><b><a href = "https://play.google.com/store/apps/details?id=com.connectsmart.carpool.transit.gps.directions.rideshare.navigate&hl=en_US&gl=US" style="display:inline">Android</a></b></u>/
+              <u><b><a href = "https://apps.apple.com/us/app/houston-connectsmart-traffic/id1529532077" style="display:inline">IOS</a></b></u>).
+          </p>
+
+          <p>
+              <i><u>Thanks to my Metropia colleagues for their great efforts in putting the multimodal trip planners onto the website and into the app.</u></i>
+          </p>
+
+        </section>
+
+      </article>
+
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

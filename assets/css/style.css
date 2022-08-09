@@ -130,8 +130,10 @@ a { text-decoration: none; color: white;}
 li {
     font-size: 14px;
     margin-left: 10px;
-    list-style-type: circle;
+    list-style-type: none;
  }
+
+li_text { list-style: circle; }
 
 .center {
   display: block;

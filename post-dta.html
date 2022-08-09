@@ -155,36 +155,38 @@
       <article class="about active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">Cycling Routing Engine &#128692</h2>
+          <h2 class="h2 article-title">Regional Traffic Simulation Model</h2>
         </header>
 
         <section class="about-text">
           <p>
-              The cycling routing engine was developed for the greater Houston area. Users can pick and navigate through routes
-              between an origin and a destination, of varying <b>comfort level</b>, which we defined by <i>the road type</i>, <i>the view along the road</i>,
-              <i>the altitude changes</i>, etc. This bike-friendly product suits cyclists' need in traveling with different trip purposes, recreation or commute,
-              or just cycle to chill a bit. This cycling routing engine has been integrated into the app <b><i>ConnectSmart</i></b>, which is sponsored by Texas Department of Transportation (TxDOT) as deliverables in
-              <u><b><a href = "https://www.metropia.com/houston-connectsmart" style="display:inline">ConnectSmart</a></b></u> project.
+              A Dynamic Traffic Assignment (DTA) model mimics the mutual dependencies between
+              travelers' route choices and route travel times (low-travel-time routes attract more travelers, hence increasing travel time).
+              By iteratively following the steps in the following framework,
+              DTA can establish a Dynamic User Equilibrium (DUE) status which represents the travelers route choices and
+              the resulting traffics in the most realistic way.
           </p>
-          <img src="./assets/images/cycle.gif" alt="this slowpoke moves" width="40%" class="center">
+          <img src="./assets/images/dta-framework.jpg" alt="this slowpoke moves" width="80%" class="center">
+          <p>
+              I have established and been maintaining the regional DTA model for Pima County on <u><a href = "https://www.dynust.com/" style="display:inline">DynuStudio</a></u> data management platform,
+              involved with tasks of model creation, model validation, and model calibrations. </p>
           <p> </p>
 
-          <p style="text-align:right">
-              Try our cycling routing engine in our ConnectSmart app (<u><b><a href = "https://play.google.com/store/apps/details?id=com.connectsmart.carpool.transit.gps.directions.rideshare.navigate&hl=en_US&gl=US" style="display:inline">Android</a></b></u>/
-              <u><b><a href = "https://apps.apple.com/us/app/houston-connectsmart-traffic/id1529532077" style="display:inline">IOS</a></b></u>).
-          </p>
-
-          <img src="./assets/images/cycle.jpg" alt="this slowpoke moves" width="100%">
+          <img src="./assets/images/dta-pima.gif" alt="this slowpoke moves" width="100%" class="center">
           <p> </p>
           <p>
-              <b>Route 1</b>: along the streets, sharing space with vehicles, but with less travel time
+              This regional model was delivered to Pima County Department of Transportation and since then has been used as
+              traffic analysis tool to evaluate the impact of transportation programs and the impact of changes
+              in transportation facilities.
           </p>
+          <img src="./assets/images/dta-road-diet.png" alt="this slowpoke moves" width="100%" class="center">
+          <p> </p>
           <p>
-              <b>Route 2</b>: along the bayou, having better view and high safety, but with more travel time
-          </p>
-
-          <p>
-              <i><u>Thanks to my Metropia colleagues for their great efforts in integrating this cycling routing engine into the app.</u></i>
+              The figure above illustrates the volumes changes by a future road diet program
+              (also called a lane reduction, is a technique whereby the number of lanes and/or effective width of the road is reduced)
+              on 5th/6th between Campbell Ave and Wilmot St. Blue represents the decreased volumes amount
+              while red represents the increased volumes amount. And we observed that travelers re-direct to other corridors after implementing
+              this road diet program.
           </p>
 
         </section>

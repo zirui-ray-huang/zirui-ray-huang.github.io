@@ -155,38 +155,55 @@
       <article class="about active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">Regional Traffic Simulation Model</h2>
+          <h2 class="h2 article-title">Travel Demand Management Strategies Development</h2>
         </header>
 
         <section class="about-text">
           <p>
-              A Dynamic Traffic Assignment (DTA) model mimics the mutual dependencies between
-              travelers' route choices and route travel times (low-travel-time routes attract more travelers, hence increasing travel time).
-              By iteratively following the steps in the following framework,
-              DTA can establish a Dynamic User Equilibrium (DUE) status which represents the travelers route choices and
-              the resulting traffics in the most realistic way.
+              Over the last few decades, massive demand surges due to long-weekend holidays have clogged the entire highway
+              system in Taiwan. A platform for cooperative demand management (CDM) strategies was developed to better cope with
+              this chronic issue and leapfrog the traditional forecast-react ITS management paradigm.
           </p>
-          <img src="./assets/images/dta-framework.jpg" alt="this slowpoke moves" width="80%" class="center">
+          <img src="./assets/images/m4-framework.png" alt="this slowpoke moves" width="100%" class="center">
+          <p> </p>
           <p>
-              I have established and been maintaining the regional DTA model for Pima County on <u><a href = "https://www.dynust.com/" style="display:inline">DynuStudio</a></u> data management platform,
-              involved with tasks of model creation, model validation, and model calibrations. </p>
+              The platform is fed with the users’ origin-destination pairs, previously planned departure times,
+              and acceptable departure time windows (if provided). When convergence is achieved through iterative implementations
+              <b>Modeler</b> and <b>Solver</b>, the platform gets back to users,  with the departure time suggestions to help the system achieve its optimal condition.
+          </p>
+
+          <p> The <b>modeler</b> is essentially a large-scale mesoscopic simulation model capable of reporting performance outcomes under Dynamic User Equilibrium (DUE).
+              This module reads the road network and a set of time-varying demands for the system, then generates the paths for every driver under DUE. It was developed using
+              <u><a href = "https://www.dynust.com/" style="display:inline">DynuStudio</a></u> </p>
           <p> </p>
 
-          <img src="./assets/images/dta-pima.gif" alt="this slowpoke moves" width="100%" class="center">
+          <img src="./assets/images/m4-simulation.gif" alt="this slowpoke moves" width="100%" class="center">
           <p> </p>
           <p>
-              This regional model was delivered to Pima County Department of Transportation and since then has been used as
-              traffic analysis tool to evaluate the impact of transportation programs and the impact of changes
-              in transportation facilities.
+              The <b>solver</b> utilizes paths obtained from the <b>modeler</b>, users’ acceptable departure time windows, and the static traffic flow models as the constraints,
+              then solves an optimization problem with the objective of system congestion level minimization.
           </p>
-          <img src="./assets/images/dta-road-diet.png" alt="this slowpoke moves" width="100%" class="center">
+          <img src="./assets/images/m4-results-tt.png" alt="this slowpoke moves" width="50%" class="center">
           <p> </p>
           <p>
-              The figure above illustrates the volumes changes by a future road diet program
-              (also called a lane reduction, is a technique whereby the number of lanes and/or effective width of the road is reduced)
-              on 5th/6th between Campbell Ave and Wilmot St. Blue represents the decreased volumes amount
-              while red represents the increased volumes amount. And we observed that travelers re-direct to other corridors after implementing
-              this road diet program.
+              The figure above illustrates that, in the scenario with 20% participation and a 4-hour time window,
+              the users can save 17% of the total travel time on average and 29% in the 20% participation and 8-hour time window one.
+              To have a sense of the total travel time saving, we computed that for the 20% 8-hour scenario, the total travel time
+              saving would be above 72,000 minutes (1,200 hours) which is rather significant.
+          </p>
+          <img src="./assets/images/m4-comparison-100.png" alt="this slowpoke moves" width="100%" class="center">
+          <p> </p>
+          <p>
+              We can also find that, before the optimization, the total number of trips with travel time greater than 100 minutes is considerably larger than
+              that after the optimization. This can be visualized by checking the total area of two curves.
+              This means that the optimization reduced the vehicle travel time, and many vehicles move from this group to the travel time
+              less than 100-minutes group.
+          </p>
+          <p>
+                This is one of the first studies to model the CDM strategy on large-scale highway systems with personalized departure time solutions.
+              The proposed framework indicates a viable way to incorporate simulation results into management strategies designed to ensure real-world
+              effectiveness. This study provides a promising conclusion that the CDM strategy is worth consideration for future large-scale highway
+              travel management during long holiday events.
           </p>
 
         </section>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zirui Huang's Home Page</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Zirui Huang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Zirui Huang">Zirui Huang</h1>
+
+          <p class="title">Ph.D. Candidate in Transportation</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/raymondzrhuang/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+<!--
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ziruihuang@arizona.edu" class="h7 contact-link">ziruihuang@arizona.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+15202433284" class="contact-link">+1 (520) 243-3284</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Tucson, Arizona, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link onclick="history.back()">Back</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Incidents Impacts Predictions using Conditional GAN</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+              I proposed a prediction framework which focuses on training a ML model to predict the speed heatmap associated with incidents.
+              Heatmaps contain ideal information that depicts the spatiotemporal characteristics of incident-induced impacts, and are suitable
+              objects for ML models to understand and predict. Because of the sparsity of incident data in the real world, we proposed a simulation
+              approach to rapidly expand the training dataset, thus speeding up the model training process.
+          </p>
+          <img src="./assets/images/profile-gan.jpg" alt="this slowpoke moves" width="80%" class="center">
+          <p> </p>
+          <p>
+              The C-DCGAN is employed to predict the speed heatmap and the mesoscopic DTA model DynusT was used to generate many training data. The
+              architectures of Generator G and Discriminator D are shown in the figure above.
+          </p>
+
+          <img src="./assets/images/gan-results.jpg" alt="this slowpoke moves" width="80%" class="center">
+          <p> </p>
+          <p style="text-align:right">
+          Predictions Results and Evaluations
+          </p>
+          <p>
+              As can be seen in Figure a, the initial images are nothing but random noise, but throughout the training process, the model is gradually shaping the random
+              noise to capture the features. After 50 epochs, the CGAN-generated speed heatmap turns into an excellent spatiotemporal representation of the nonrecurring traffic
+              patterns. By the subjective evaluation based on visual fidelity, the prediction results and simulation results have much in common in relation to shape features
+              and colors. Though the random noise still exists after training for 50 epochs, it has no influence on evaluating the spatiotemporal impacts of the incidents.
+          </p>
+            <p>
+                The histogram of the similarities between prediction results and simulation results in 14,000 scenarios (the whole test dataset) is shown in Figure c.
+                The majority of the similarities fall into the range between 75% and 90%, and the average similarity is 80.19%.
+            </p>
+            <p>
+              <i>For more details, click <u><a href = "https://www.researchgate.net/profile/Zirui-Huang-2/publication/342702343_Using_Conditional_Generative_Adversarial_Nets_and_Heat_Maps_with_Simulation-Accelerated_Training_to_Predict_the_Spatiotemporal_Impacts_of_Highway_Incidents/links/5f9128cf458515b7cf9380c6/Using-Conditional-Generative-Adversarial-Nets-and-Heat-Maps-with-Simulation-Accelerated-Training-to-Predict-the-Spatiotemporal-Impacts-of-Highway-Incidents.pdf" style="display:inline">here</a></u></i>
+          </p>
+        </section>
+
+      </article>
+
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

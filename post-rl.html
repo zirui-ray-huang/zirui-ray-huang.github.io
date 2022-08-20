@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zirui Huang's Home Page</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Zirui Huang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Zirui Huang">Zirui Huang</h1>
+
+          <p class="title">Ph.D. Candidate in Transportation</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/raymondzrhuang/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+<!--
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ziruihuang@arizona.edu" class="h7 contact-link">ziruihuang@arizona.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+15202433284" class="contact-link">+1 (520) 243-3284</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Tucson, Arizona, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link onclick="history.back()">Back</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Incident Duration Sequential Predictions with Reinforcement Learning</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+              Incident duration prediction is crucial in Transportation System Management and Operations (TSMO) regardless of
+              whether the information is directly reported to travelers or utilized in devising traffic control measures.
+              Sequential prediction is the process by which an incident duration is predicted at its inception, and potential follow-up
+              predictions or revisions to earlier predictions are made after that.  One circumstance that necessitates sequential
+              predictions but has never been addressed is that the incident hasn’t been cleared despite the elapsed time specified
+              in the duration estimation.  We proposed a methodology for training a Reinforcement Learning (RL) agent to produce
+              sequential predictions under this circumstance.
+          </p>
+          <img src="./assets/images/rl.png" alt="this slowpoke moves" width="80%" class="center">
+          <p> </p>
+          <p>
+              The figure above depicts the action-reward feedback loop for this problem which used DQNs to train the RL agent.
+              DQNs use neural networks to approximate the Q values with the state as input and the Q values for all possible
+              actions as outputs.  The loop proceeds as follows:
+          </p>
+          <p>
+              <b>Step 1:</b> The agent is initially with state s<sup>0</sup>=(x<sub>1</sub><sup>0</sup>,x<sub>2</sub><sup>0</sup>,…,x<sub>n</sub><sup>0</sup>,p<sup>0</sup> ), where p<sup>0</sup>=0,
+              i.e., the current prediction is 0, since the agent hasn’t started to predict yet.
+              Following the agent’s action a<sup>0</sup>, the agent receives reward r<sup>1</sup> and the agent’s state changes to s<sup>1</sup>=(x<sub>1</sub><sup>1</sup>,x<sub>2</sub><sup>1</sup>,…,x<sub>n</sub><sup>1</sup>,p<sup>1</sup> ),
+              where p<sup>1</sup>=p<sup>0</sup>+a<sup>0</sup>, i.e., the current prediction equals to, the previous prediction plus the adjustment made on it.
+          </p>
+            <p>
+                <b>Step 2:</b> Without loss of generality, the agent at time t possesses s<sup>t</sup>=(x<sub>1</sub><sup>t</sup>,x<sub>2</sub><sup>t</sup>,…,x<sub>n</sub><sup>t</sup>,p<sup>t</sup> ).
+                Following the agent’s action a<sup>t</sup>, the agent obtains the reward r<sup>t+1</sup> and the agent’s state transits to
+                s<sup>t+1</sup>=(x<sub>1</sub><sup>t+1</sup>,x<sub>2</sub><sup>t+1</sup>,…,x<sub>n</sub><sup>t+1</sup>,p<sup>t+1</sup> ), where p<sup>t+1</sup>=p<sup>t</sup>+a<sup>t</sup>.
+            </p>
+
+            <p>
+                <b>Step 3:</b> The loop ends when the incident is cleared.
+            </p>
+
+          <img src="./assets/images/rl-results.png" alt="this slowpoke moves" width="80%" class="center">
+          <p> </p>
+          <p style="text-align:right">
+          Average cumulative rewards/punishments in training
+          </p>
+          <p>
+              We applied the methodology to the Houston TranStar incidents data and trained an RL agent, which can produce
+              a new prediction when an earlier one becomes invalid.  For 62.3% of incident occurrences, the agent functions
+              as a one-time prediction method.  However, when a one-time prediction has a considerable error, additional p
+              redictions can be generated to make up for the one-time prediction’s shortcomings.  The final prediction in
+              each sequence had a Mean Absolute Error (MAE) of 11.4 minutes, 15 minutes less than the smallest MAE of 26.1
+              minutes that we obtained using one-time prediction techniques on the same dataset.  It is the first piece of work
+              that produces sequential predictions under this circumstance.  The proposed methodology facilitates the Traffic
+              Incident Management (TIM) system to provide travelers with updated information to make informed decisions.
+          </p>
+        </section>
+
+      </article>
+
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
